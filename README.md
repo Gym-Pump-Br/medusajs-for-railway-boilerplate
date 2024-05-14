@@ -89,3 +89,5 @@ Rename `.env.local.template` ->  `.env.local`
 `yarn wait` will keep calling backend endpoint until a backend responds.
 `yarn build` will build the nextjs app - remember to start backend app prior to running this command.
 `yarn start` will serve the frontend web shop.
+
+<!-- trigger build>
