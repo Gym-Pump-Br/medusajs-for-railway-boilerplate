@@ -5,6 +5,8 @@ import { listRegions } from "@lib/data"
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
+import { User } from "@medusajs/icons"
+import Link from "next/link"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -19,14 +21,17 @@ export default async function Nav() {
             </div>
           </div>
 
-          <div className="flex items-center h-full">
-            <LocalizedClientLink
-              href="/"
-              className="txt-compact-xlarge-plus hover:text-ui-fg-base uppercase"
-            >
-              Medusa Store
-            </LocalizedClientLink>
-          </div>
+          <Link href="/">
+            <div className="flex items-center h-full">
+              <img
+                width={50}
+                height={20}
+                src="https://res.cloudinary.com/db2zaxqab/image/upload/v1715892656/PUMP_l9roxu.png"
+                alt="image logo"
+                className="cursor-pointer"
+              />
+            </div>
+          </Link>
 
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
@@ -43,7 +48,7 @@ export default async function Nav() {
                 className="hover:text-ui-fg-base"
                 href="/account"
               >
-                Account
+                <User />
               </LocalizedClientLink>
             </div>
             <Suspense
