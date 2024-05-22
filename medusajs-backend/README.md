@@ -42,4 +42,3 @@ Please change the value of environtment variables: `COOCKIE_SECRET` and `JWT_SEC
 `npm run build` will compile app.
 `npm run dev` will start local admin dashboard app to manage products and orders etc.
 `npm run start` will start the backend server, needed for the storefront
-`npm run start` will start the backend server, needed for the storefront
