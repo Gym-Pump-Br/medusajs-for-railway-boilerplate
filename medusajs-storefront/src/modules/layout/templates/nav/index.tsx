@@ -7,6 +7,7 @@ import CartButton from "@modules/layout/components/cart-button"
 import SideMenu from "@modules/layout/components/side-menu"
 import { User } from "@medusajs/icons"
 import Link from "next/link"
+import Image from "next/image"
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -23,7 +24,7 @@ export default async function Nav() {
 
           <Link href="/">
             <div className="flex items-center h-full">
-              <img
+              <Image
                 width={50}
                 height={20}
                 src="https://res.cloudinary.com/db2zaxqab/image/upload/v1715892656/PUMP_l9roxu.png"
