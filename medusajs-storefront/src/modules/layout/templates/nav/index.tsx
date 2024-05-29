@@ -16,35 +16,32 @@ export default async function Nav() {
     <div className="sticky top-0 inset-x-0 z-50 group">
       <header className="relative h-16 mx-auto border-b duration-200 bg-white border-ui-border-base">
         <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
-          <div className="flex-1 basis-0 h-full flex items-center">
-            <div className="h-full">
-              <SideMenu regions={regions} />
-            </div>
+          <div className="flex-1">
+            <Link href="/">
+              <div className=" flex items-center h-full">
+                <Image
+                  width={50}
+                  height={20}
+                  src="https://res.cloudinary.com/db2zaxqab/image/upload/v1715892656/PUMP_l9roxu.png"
+                  alt="image logo"
+                  className="cursor-pointer"
+                />
+              </div>
+            </Link>
           </div>
 
-          <Link href="/">
-            <div className="flex items-center h-full">
-              <Image
-                width={50}
-                height={20}
-                src="https://res.cloudinary.com/db2zaxqab/image/upload/v1715892656/PUMP_l9roxu.png"
-                alt="image logo"
-                className="cursor-pointer"
-              />
-            </div>
-          </Link>
+         
+            <LocalizedClientLink
+              className="hover:text-ui-fg-base"
+              href="/search"
+              scroll={false}
+            >
+              Search
+            </LocalizedClientLink>
+      
 
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
-              {process.env.FEATURE_SEARCH_ENABLED && (
-                <LocalizedClientLink
-                  className="hover:text-ui-fg-base"
-                  href="/search"
-                  scroll={false}
-                >
-                  Search
-                </LocalizedClientLink>
-              )}
               <LocalizedClientLink
                 className="hover:text-ui-fg-base"
                 href="/account"
@@ -62,8 +59,15 @@ export default async function Nav() {
                 </LocalizedClientLink>
               }
             >
-              <CartButton />
+              <div>
+                <CartButton />
+              </div>
             </Suspense>
+            <div className="md:hidden basis-0 h-full flex items-center">
+              <div className="h-full">
+                <SideMenu regions={regions} />
+              </div>
+            </div>
           </div>
         </nav>
       </header>

@@ -22,7 +22,7 @@ const SideMenu = ({ regions }: { regions: Region[] | null }) => {
   const toggleState = useToggleState()
 
   return (
-    <div className="h-full">
+    <div className="h-full ">
       <div className="flex items-center h-full">
         <Popover className="h-full flex">
           {({ open, close }) => (
