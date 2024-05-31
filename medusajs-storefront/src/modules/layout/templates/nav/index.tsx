@@ -8,6 +8,15 @@ import SideMenu from "@modules/layout/components/side-menu"
 import { User } from "@medusajs/icons"
 import Link from "next/link"
 import Image from "next/image"
+import { MagnifyingGlassMini } from "@medusajs/icons"
+
+const SideMenuItems = {
+  Lar: "/",
+  Loja: "/store",
+  Pesquisa: "/search",
+  Conta: "/account",
+  Carrinho: "/cart",
+}
 
 export default async function Nav() {
   const regions = await listRegions().then((regions) => regions)
@@ -30,15 +39,13 @@ export default async function Nav() {
             </Link>
           </div>
 
-         
-            <LocalizedClientLink
-              className="hover:text-ui-fg-base"
-              href="/search"
-              scroll={false}
-            >
-              Search
-            </LocalizedClientLink>
-      
+          <LocalizedClientLink
+            className="hover:text-ui-fg-base"
+            href="/search"
+            scroll={false}
+          >
+            <MagnifyingGlassMini />
+          </LocalizedClientLink>
 
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
@@ -63,7 +70,7 @@ export default async function Nav() {
                 <CartButton />
               </div>
             </Suspense>
-            <div className="md:hidden basis-0 h-full flex items-center">
+            <div className="basis-0 h-full flex items-center">
               <div className="h-full">
                 <SideMenu regions={regions} />
               </div>
@@ -71,6 +78,25 @@ export default async function Nav() {
           </div>
         </nav>
       </header>
+      <div className="relative h-20 mx-auto border-b duration-200 bg-white border-ui-border-base-16">
+        <div className="">
+          {" "}
+          <ul className="flex flex-row gap-6 items-center justify-center">
+            {Object.entries(SideMenuItems).map(([name, href]) => {
+              return (
+                <li key={name}>
+                  <LocalizedClientLink
+                    href={href}
+                    className="text-2xl leading-10 hover:text-ui-fg-disabled"
+                  >
+                    {name}
+                  </LocalizedClientLink>
+                </li>
+              )
+            })}
+          </ul>
+        </div>
+      </div>
     </div>
   )
 }
