@@ -74,6 +74,13 @@ const plugins = [
     },
   },
   {
+    resolve: `medusa-payment-stripe`,
+    options: {
+      api_key: process.env.STRIPE_API_KEY,
+      webhook_secret: process.env.STRIPE_WEBHOOK_SECRET,
+    },
+  },
+  {
     resolve: `medusa-plugin-algolia`,
     options: {
       applicationId: process.env.ALGOLIA_APP_ID,
@@ -81,22 +88,21 @@ const plugins = [
       settings: {
         products: {
           indexSettings: {
-          searchableAttributes: ["title", "description"],
-          attributesToRetrieve: [
-            "id",
-            "title",
-            "description",
-            "handle",
-            "thumbnail",
-            "variants",
-            "variant_sku",
-            "options",
-            "collection_title",
-            "collection_handle",
-            "images",
-          ],
+            searchableAttributes: ["title", "description"],
+            attributesToRetrieve: [
+              "id",
+              "title",
+              "description",
+              "handle",
+              "thumbnail",
+              "variants",
+              "variant_sku",
+              "options",
+              "collection_title",
+              "collection_handle",
+              "images",
+            ],
           },
-        
         },
       },
     },
@@ -104,18 +110,7 @@ const plugins = [
 ];
 
 const modules = {
-  /*eventBus: {
-    resolve: "@medusajs/event-bus-redis",
-    options: {
-      redisUrl: REDIS_URL
-    }
-  },
-  cacheService: {
-    resolve: "@medusajs/cache-redis",
-    options: {
-      redisUrl: REDIS_URL
-    }
-  },*/
+ 
 };
 
 /** @type {import('@medusajs/medusa').ConfigModule["projectConfig"]} */
