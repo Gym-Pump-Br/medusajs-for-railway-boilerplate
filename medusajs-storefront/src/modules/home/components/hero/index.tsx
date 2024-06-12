@@ -15,8 +15,8 @@ const Hero = () => {
           <Image
             src="https://res.cloudinary.com/db2zaxqab/image/upload/v1716907087/pexels-ricky-rijan-1680247_k3bf3u.jpg"
             alt="image"
-            width={200}
-            height={300}
+            width={2000}
+            height={0}
             className="w-full"
           />
         </div>
@@ -26,7 +26,7 @@ const Hero = () => {
           <Image
             src="https://res.cloudinary.com/db2zaxqab/image/upload/v1716314589/gym-interior-background-of-dumbbells-on-rack-in-fitness-and-workout-room-photo_sewgol.jpg"
             alt="image"
-            width={300}
+            width={2000}
             height={0}
             className="w-full"
           />

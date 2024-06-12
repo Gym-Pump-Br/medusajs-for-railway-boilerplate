@@ -20,7 +20,7 @@ export default async function Footer() {
             <img
               width={150}
               height={50}
-              src="https://res.cloudinary.com/db2zaxqab/image/upload/v1715892656/PUMP_l9roxu.png"
+              src="https://res.cloudinary.com/db2zaxqab/image/upload/v1717685775/MARCA_D_A%CC%81GUA3_nibjse.png"
               className="cursor-pointer"
             />
           </div>

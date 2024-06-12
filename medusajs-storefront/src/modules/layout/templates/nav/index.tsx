@@ -23,7 +23,7 @@ export default async function Nav() {
 
   return (
     <div className="sticky top-0 inset-x-0 z-50 group">
-      <header className="relative h-16 mx-auto border-b duration-200 bg-white border-ui-border-base">
+      <header className="relative h-20 mx-auto border- duration-200 bg-[#262626] border-ui-border-base">
         <nav className="content-container txt-xsmall-plus text-ui-fg-subtle flex items-center justify-between w-full h-full text-small-regular">
           <div className="flex-1">
             <Link href="/">
@@ -31,7 +31,7 @@ export default async function Nav() {
                 <Image
                   width={50}
                   height={20}
-                  src="https://res.cloudinary.com/db2zaxqab/image/upload/v1715892656/PUMP_l9roxu.png"
+                  src="https://res.cloudinary.com/db2zaxqab/image/upload/v1717685772/MARCA_D_A%CC%81GUA4_ykp5cf.png"
                   alt="image logo"
                   className="cursor-pointer"
                 />
@@ -44,7 +44,7 @@ export default async function Nav() {
             href="/search"
             scroll={false}
           >
-            <MagnifyingGlassMini />
+            <MagnifyingGlassMini color="white" />
           </LocalizedClientLink>
 
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
@@ -53,7 +53,7 @@ export default async function Nav() {
                 className="hover:text-ui-fg-base"
                 href="/account"
               >
-                <User />
+                <User color="white" />
               </LocalizedClientLink>
             </div>
             <Suspense
@@ -70,7 +70,7 @@ export default async function Nav() {
                 <CartButton />
               </div>
             </Suspense>
-            <div className="basis-0 h-full flex items-center">
+            <div className="md:hidden basis-0 h-full flex items-center text-white">
               <div className="h-full">
                 <SideMenu regions={regions} />
               </div>
@@ -78,24 +78,22 @@ export default async function Nav() {
           </div>
         </nav>
       </header>
-      <div className="relative h-20 mx-auto border-b duration-200 bg-white border-ui-border-base-16">
-        <div className="">
-          {" "}
-          <ul className="flex flex-row gap-6 items-center justify-center">
-            {Object.entries(SideMenuItems).map(([name, href]) => {
-              return (
-                <li key={name}>
-                  <LocalizedClientLink
-                    href={href}
-                    className="text-2xl leading-10 hover:text-ui-fg-disabled"
-                  >
-                    {name}
-                  </LocalizedClientLink>
-                </li>
-              )
-            })}
-          </ul>
-        </div>
+      <div className="hidden md:block  p-2 mx-auto border-b duration-200 bg-white border-ui-border-base-16">
+        {" "}
+        <ul className="flex flex-row gap-6 items-center justify-center">
+          {Object.entries(SideMenuItems).map(([name, href]) => {
+            return (
+              <li key={name}>
+                <LocalizedClientLink
+                  href={href}
+                  className="text-xl leading-10 hover:text-ui-fg-disabled"
+                >
+                  {name}
+                </LocalizedClientLink>
+              </li>
+            )
+          })}
+        </ul>
       </div>
     </div>
   )
