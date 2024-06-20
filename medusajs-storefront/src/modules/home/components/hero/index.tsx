@@ -6,14 +6,13 @@ import Image from "next/image"
 
 const Hero = () => {
   return (
-    <div className="h-[75vh] w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
-      <div className="absolute inset-0 z-10 flex flex-col justify-center items-center text-center gap-6">
-
-      
-
-        <div className="w-full md:hidden"> {/* Este é Image mobile */}
+    <div className="h-full w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
+      <div className="">
+        <div className="w-full md:hidden">
+          {" "}
+          {/* Este é Image mobile */}
           <Image
-            src="https://res.cloudinary.com/db2zaxqab/image/upload/v1716907087/pexels-ricky-rijan-1680247_k3bf3u.jpg"
+            src="https://res.cloudinary.com/db2zaxqab/image/upload/v1718895851/Mobile_540x_secyah.png"
             alt="image"
             width={2000}
             height={0}
@@ -21,17 +20,17 @@ const Hero = () => {
           />
         </div>
 
-
-        <div className="w-full hidden md:block">  {/* Aqui está Image desktop */}
+        <div className="w-full  hidden md:block">
+          {" "}
+          {/* Aqui está Image desktop */}
           <Image
-            src="https://res.cloudinary.com/db2zaxqab/image/upload/v1716314589/gym-interior-background-of-dumbbells-on-rack-in-fitness-and-workout-room-photo_sewgol.jpg"
+            src="https://res.cloudinary.com/db2zaxqab/image/upload/v1718895852/Desktop_1944x_vnh8lf.png"
             alt="image"
             width={2000}
             height={0}
             className="w-full"
           />
         </div>
-
       </div>
     </div>
   )

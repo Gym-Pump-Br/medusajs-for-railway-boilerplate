@@ -11,7 +11,7 @@ export default async function Footer() {
   const { product_categories } = await getCategoriesList(0, 6)
 
   return (
-    <footer className="border-t border-ui-border-base w-full">
+    <footer className="border-t border-ui-border-base w-full bg-[#262626] text-white">
       <div className="content-container flex flex-col w-full">
         <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
           
@@ -20,7 +20,7 @@ export default async function Footer() {
             <img
               width={150}
               height={50}
-              src="https://res.cloudinary.com/db2zaxqab/image/upload/v1717685775/MARCA_D_A%CC%81GUA3_nibjse.png"
+              src="https://res.cloudinary.com/db2zaxqab/image/upload/v1717685770/MARCA_D_A%CC%81GUA9_ery6su.png"
               className="cursor-pointer"
             />
           </div>
@@ -31,7 +31,7 @@ export default async function Footer() {
                 <span className="txt-small-plus txt-ui-fg-base">
                   Categorias
                 </span>
-                <ul className="grid grid-cols-1 gap-2">
+                <ul className="grid grid-cols-1 gap-2 ">
                   {product_categories?.slice(0, 6).map((c) => {
                     if (c.parent_category) {
                       return
@@ -46,7 +46,7 @@ export default async function Footer() {
 
                     return (
                       <li
-                        className="flex flex-col gap-2 text-ui-fg-subtle txt-small"
+                        className="flex flex-col gap-2 text-ui-fg-subtle txt-small text-white"
                         key={c.id}
                       >
                         <LocalizedClientLink
@@ -84,7 +84,7 @@ export default async function Footer() {
                 <span className="txt-small-plus txt-ui-fg-base">Coleções</span>
                 <ul
                   className={clx(
-                    "grid grid-cols-1 gap-2 text-ui-fg-subtle txt-small",
+                    "grid grid-cols-1 gap-2 text-ui-fg-subtle txt-small text-white",
                     {
                       "grid-cols-2": (collections?.length || 0) > 3,
                     }
@@ -105,7 +105,7 @@ export default async function Footer() {
             )}
             <div className="flex flex-col gap-y-2">
               <span className="txt-small-plus txt-ui-fg-base">Medusa</span>
-              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small">
+              <ul className="grid grid-cols-1 gap-y-2 text-ui-fg-subtle txt-small text-white">
                 <li>
                   <a
                     href="https://github.com/medusajs"

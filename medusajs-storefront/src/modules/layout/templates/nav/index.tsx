@@ -40,20 +40,20 @@ export default async function Nav() {
           </div>
 
           <LocalizedClientLink
-            className="hover:text-ui-fg-base"
+            className="hover:text-ui-fg-base text-white"
             href="/search"
             scroll={false}
           >
-            <MagnifyingGlassMini color="white" />
+            <MagnifyingGlassMini />
           </LocalizedClientLink>
 
           <div className="flex items-center gap-x-6 h-full flex-1 basis-0 justify-end">
             <div className="hidden small:flex items-center gap-x-6 h-full">
               <LocalizedClientLink
-                className="hover:text-ui-fg-base"
+                className="hover:text-ui-fg-base text-white"
                 href="/account"
               >
-                <User color="white" />
+                <User />
               </LocalizedClientLink>
             </div>
             <Suspense

@@ -5,7 +5,7 @@ import { Cart } from "@medusajs/medusa"
 import { Button } from "@medusajs/ui"
 import { useParams, usePathname } from "next/navigation"
 import { Fragment, useEffect, useRef, useState } from "react"
-import { ShoppingCart } from "@medusajs/icons"
+import { ShoppingCart, ShoppingCartSolid } from "@medusajs/icons"
 
 import { formatAmount } from "@lib/util/prices"
 import DeleteButton from "@modules/common/components/delete-button"
@@ -78,14 +78,14 @@ const CartDropdown = ({
       onMouseLeave={close}
     >
       <Popover className="relative h-full">
-        <Popover.Button className="h-full">
+       
           <LocalizedClientLink
-            className="hover:text-ui-fg-base flex text-white"
+            className="hover:text-ui-fg-base flex items-center  text-white"
             href="/cart"
           >
             <ShoppingCart /> ({totalItems })
           </LocalizedClientLink>
-        </Popover.Button>
+       
         <Transition
           show={cartDropdownOpen}
           as={Fragment}
