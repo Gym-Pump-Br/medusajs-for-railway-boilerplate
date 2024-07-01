@@ -6,10 +6,14 @@ import Image from "next/image"
 
 const Hero = () => {
   return (
-    <div className="h-full w-full border-b border-ui-border-base relative bg-ui-bg-subtle">
+    <div className="h-full w-full  border-ui-border-base relative bg-ui-bg-subtle">
       <div className="">
         <div className="w-full md:hidden">
-          {" "}
+          <div className="absolute inset-x-0 bottom-4 z-10 flex justify-center">
+            <Button className="h-10 w-44 flex items-center rounded-full font-montserrat tracking-widest bg-white text-black">
+              CAMISETAS
+            </Button>
+          </div>{" "}
           {/* Este é Image mobile */}
           <Image
             src="https://res.cloudinary.com/db2zaxqab/image/upload/v1718895851/Mobile_540x_secyah.png"
@@ -21,6 +25,11 @@ const Hero = () => {
         </div>
 
         <div className="w-full  hidden md:block">
+        <div className="absolute inset-x-0 bottom-4 z-10 flex justify-center">
+            <Button className="h-10 w-44 flex items-center rounded-full font-montserrat tracking-widest bg-white text-black">
+                BERMUDAS
+            </Button>
+          </div>{" "}
           {" "}
           {/* Aqui está Image desktop */}
           <Image

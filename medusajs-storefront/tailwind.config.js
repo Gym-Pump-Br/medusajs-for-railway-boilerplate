@@ -1,4 +1,4 @@
-const path = require("path")
+const path = require("path");
 
 module.exports = {
   presets: [require("@medusajs/ui-preset")],
@@ -68,6 +68,7 @@ module.exports = {
           "Ubuntu",
           "sans-serif",
         ],
+        montserrat: ['Montserrat', 'sans-serif'], // Adicione esta linha
       },
       keyframes: {
         ring: {
@@ -158,4 +159,4 @@ module.exports = {
     },
   },
   plugins: [require("tailwindcss-radix")()],
-}
+};
