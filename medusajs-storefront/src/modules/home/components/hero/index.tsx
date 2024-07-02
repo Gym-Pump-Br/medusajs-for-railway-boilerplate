@@ -10,7 +10,7 @@ const Hero = () => {
       <div className="">
         <div className="w-full md:hidden">
           <div className="absolute inset-x-0 bottom-4 z-10 flex justify-center">
-            <Button className="h-10 w-44 flex items-center rounded-full font-montserrat tracking-widest bg-white text-black">
+            <Button className="h-10 w-44 flex items-center rounded-full font-montserrat tracking-widest bg-white text-black hover:scale-110 ease-out duration-300">
               CAMISETAS
             </Button>
           </div>{" "}
@@ -26,7 +26,7 @@ const Hero = () => {
 
         <div className="w-full  hidden md:block">
         <div className="absolute inset-x-0 bottom-4 z-10 flex justify-center">
-            <Button className="h-10 w-44 flex items-center rounded-full font-montserrat tracking-widest bg-white text-black">
+            <Button className="h-10 w-44 flex items-center rounded-full font-montserrat tracking-widest bg-white text-black hover:scale-110 ease-out duration-700">
                 BERMUDAS
             </Button>
           </div>{" "}

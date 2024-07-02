@@ -3,6 +3,8 @@ import ProductPreview from "@modules/products/components/product-preview"
 import { Pagination } from "@modules/store/components/pagination"
 import { SortOptions } from "@modules/store/components/refinement-list/sort-products"
 
+
+
 const PRODUCT_LIMIT = 12
 
 type PaginatedProductsParams = {

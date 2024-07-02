@@ -5,6 +5,7 @@ import React from "react"
 
 import PlaceholderImage from "@modules/common/icons/placeholder-image"
 
+
 type ThumbnailProps = {
   thumbnail?: string | null
   images?: MedusaImage[] | null
@@ -40,6 +41,8 @@ const Thumbnail: React.FC<ThumbnailProps> = ({
     >
       <ImageOrPlaceholder image={initialImage} size={size} />
     </Container>
+    
+   
   )
 }
 
