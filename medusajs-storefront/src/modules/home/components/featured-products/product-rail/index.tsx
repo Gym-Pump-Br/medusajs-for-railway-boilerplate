@@ -38,15 +38,15 @@ export default function ProductRail({
               </li>
             ))}
         </ul>
+
         <div className="flex justify-center m-8">
-          <button className="bg-[#262626] md:h-12 md:w-38 h-10 w-36 grid items-center justify-center rounded-full hover:scale-110 easy-in duration-500">
+          <button className="bg-[#262626] md:h-12 md:w-38 h-10 w-36 grid items-center justify-center rounded-full hover:scale-110 ease-in duration-500">
             <InteractiveLink href={`/collections/${collection.handle}`}>
               Ver todos
             </InteractiveLink>
           </button>
         </div>
       </div>
-      <BannerCamisetas />
     </div>
   )
 }

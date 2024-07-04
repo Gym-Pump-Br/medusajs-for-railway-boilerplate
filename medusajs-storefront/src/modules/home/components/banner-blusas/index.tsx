@@ -14,15 +14,17 @@ const BannerBlu = () => {
           src="https://res.cloudinary.com/db2zaxqab/image/upload/v1719940064/Backgroundmobile_gjlv3z.png"
           width={2000}
           height={0}
+          className="w-full"
         />
       </div>
 
       <div className="hidden md:block"> {/* Aqui está Image desktop */}
         <Image
           alt="image"
-          src="https://res.cloudinary.com/db2zaxqab/image/upload/v1719949671/Desktop_250_mil_1944x.png_rgokcp.png"
+          src="https://res.cloudinary.com/db2zaxqab/image/upload/v1719940066/Background_ppjbtv.png"
           width={2000}
           height={0}
+          className="w-full"
         />
       </div>
     </div>
