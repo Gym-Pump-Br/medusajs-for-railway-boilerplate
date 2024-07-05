@@ -7,6 +7,7 @@ import Hero from "@modules/home/components/hero"
 import BrowseProducts from "@modules/home/components/browse-products"
 import BannerCamisetas from "@modules/home/components/banner-camisetas"
 import BannerBermudas from "@modules/home/components/banner-bermudas"
+import BannerInstagram from "@modules/home/components/banner-instagram"
 
 import { ProductCollectionWithPreviews } from "types/global"
 import { cache } from "react"
@@ -88,6 +89,7 @@ export default async function Home({
           <FeaturedProducts collections={collections} region={region} />
         </ul>
       </div>
+      <BannerInstagram />
     </>
   )
 }

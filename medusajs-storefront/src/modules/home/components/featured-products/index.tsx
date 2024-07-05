@@ -15,7 +15,7 @@ export default async function FeaturedProducts({
   region: Region
 }) {
   // Ajuste a ordem dos banners conforme desejado
-  const banners = [<BannerCamisetas key="camisetas" />, <BannerBlusas key="blusas" />, <BannerInstagram key="instagram" />]
+  const banners = [<BannerCamisetas key="camisetas" />, <BannerBlusas key="blusas" />,]
 
   return (
     <ul>
