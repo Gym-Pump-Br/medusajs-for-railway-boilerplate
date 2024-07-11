@@ -19,8 +19,16 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
       component: <ProductInfoTab product={product} />,
     },
     {
-      label: "Envios e Devoluções",
+      label: "Guia de tamanhos",
       component: <ShippingInfoTab />,
+    },
+    {
+      label: "Frete e entrega",
+      component: <FreteEntrega />,
+    },
+    {
+      label: "Troca e devoluções",
+      component: <TrocaDevolucoes />,
     },
   ]
 
@@ -85,6 +93,86 @@ const ProductInfoTab = ({ product }: ProductTabsProps) => {
 }
 
 const ShippingInfoTab = () => {
+  return (
+    <div className="text-small-regular py-8">
+      <div className="grid grid-cols-1 gap-y-8">
+        <div className="flex items-start gap-x-2">
+          <FastDelivery />
+          <div>
+            <span className="font-semibold">Entrega rápida</span>
+            <p className="max-w-sm">
+              Seu pacote chegará em 3 a 5 dias úteis na sua retirada local ou no
+              conforto da sua casa.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-x-2">
+          <Refresh />
+          <div>
+            <span className="font-semibold">Trocas simples</span>
+            <p className="max-w-sm">
+              O ajuste não está certo? Não se preocupe - trocaremos o seu
+              produto por um novo.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-x-2">
+          <Back />
+          <div>
+            <span className="font-semibold">Devoluções fáceis</span>
+            <p className="max-w-sm">
+              Basta devolver seu produto e nós reembolsaremos seu dinheiro. Não
+              perguntas feitas - faremos o nosso melhor para garantir o seu
+              retorno é descomplicado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const FreteEntrega = () => {
+  return (
+    <div className="text-small-regular py-8">
+      <div className="grid grid-cols-1 gap-y-8">
+        <div className="flex items-start gap-x-2">
+          <FastDelivery />
+          <div>
+            <span className="font-semibold">Entrega rápida</span>
+            <p className="max-w-sm">
+              Seu pacote chegará em 3 a 5 dias úteis na sua retirada local ou no
+              conforto da sua casa.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-x-2">
+          <Refresh />
+          <div>
+            <span className="font-semibold">Trocas simples</span>
+            <p className="max-w-sm">
+              O ajuste não está certo? Não se preocupe - trocaremos o seu
+              produto por um novo.
+            </p>
+          </div>
+        </div>
+        <div className="flex items-start gap-x-2">
+          <Back />
+          <div>
+            <span className="font-semibold">Devoluções fáceis</span>
+            <p className="max-w-sm">
+              Basta devolver seu produto e nós reembolsaremos seu dinheiro. Não
+              perguntas feitas - faremos o nosso melhor para garantir o seu
+              retorno é descomplicado.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+const TrocaDevolucoes = () => {
   return (
     <div className="text-small-regular py-8">
       <div className="grid grid-cols-1 gap-y-8">
