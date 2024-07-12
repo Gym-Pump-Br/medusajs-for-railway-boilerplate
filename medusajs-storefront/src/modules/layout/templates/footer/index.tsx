@@ -2,6 +2,7 @@ import { Text, clx } from "@medusajs/ui"
 
 import { getCategoriesList, getCollectionsList } from "@lib/data"
 import Link from "next/link"
+import Image from "next/image"
 
 import LocalizedClientLink from "@modules/common/components/localized-client-link"
 import MedusaCTA from "@modules/layout/components/medusa-cta"
@@ -12,20 +13,23 @@ export default async function Footer() {
 
   return (
     <footer className="  w-full bg-[#262626] text-white">
-      <div className="content-container flex flex-col w-full">
-        <div className="flex flex-col gap-y-6 xsmall:flex-row items-start justify-between py-40">
-          
+      <div className=" flex flex-col w-full">
+        <div>
           <Link href="/">
-          <div>
-            <img
-              width={150}
-              height={50}
-              src="https://res.cloudinary.com/db2zaxqab/image/upload/v1717685770/MARCA_D_A%CC%81GUA9_ery6su.png"
-              className="cursor-pointer"
-            />
-          </div>
+            <div className="flex justify-center py-10">
+              <Image
+                alt="image"
+                width={150}
+                height={50}
+                src="https://res.cloudinary.com/db2zaxqab/image/upload/v1717685770/MARCA_D_A%CC%81GUA9_ery6su.png"
+                className="cursor-pointer"
+              />
+            </div>
           </Link>
-          <div className="text-small-regular gap-10 md:gap-x-16 grid grid-cols-2 sm:grid-cols-3">
+        </div>
+
+        <div className="flex justify-center py-40">
+          <div className="text-center">
             {product_categories && product_categories?.length > 0 && (
               <div className="flex flex-col gap-y-2">
                 <span className="txt-small-plus txt-ui-fg-base">
@@ -140,11 +144,26 @@ export default async function Footer() {
             </div>
           </div>
         </div>
-        <div className="flex w-full mb-16 justify-between text-ui-fg-muted">
+
+        <div className="flex justify-center py-5">
+          <a
+            href="https://www.instagram.com/vistagympump/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <Image
+              alt="image"
+              width={70}
+              height={50}
+              src="https://res.cloudinary.com/db2zaxqab/image/upload/v1720723152/icons8-instagram_shakvf.svg"
+              className="cursor-pointer border-2 rounded-full border-white p-4"
+            />
+          </a>
+        </div>
+        <div className="flex w-full mb-16 justify-center text-ui-fg-muted">
           <Text className="txt-compact-small">
             © {new Date().getFullYear()} Gym Pump. Todos os direitos reservados.
           </Text>
-          <MedusaCTA />
         </div>
       </div>
     </footer>
