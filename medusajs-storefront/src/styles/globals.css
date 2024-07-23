@@ -109,4 +109,8 @@
   .text-3xl-semi {
     @apply text-[32px] leading-[44px] font-semibold;
   }
+
+  .text-4xl-bold {
+    @apply text-[32px] leading-[44px] font-bold;
+  }
 }

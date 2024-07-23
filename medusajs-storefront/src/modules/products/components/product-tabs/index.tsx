@@ -15,7 +15,7 @@ type ProductTabsProps = {
 const ProductTabs = ({ product }: ProductTabsProps) => {
   const tabs = [
     {
-      label: "Informação do produto",
+      label: "Descrição",
       component: <ProductInfoTab product={product} />,
     },
     {

@@ -125,7 +125,7 @@ export default function ProductActions({
 
   return (
     <>
-      <div className="flex flex-col gap-y-2" ref={actionsRef}>
+      <div className="flex flex-col gap-y-2 text-center md:text-start" ref={actionsRef}>
         <ProductPrice product={product} variant={variant} region={region} />  
         <div>
           {product.variants.length > 1 && (

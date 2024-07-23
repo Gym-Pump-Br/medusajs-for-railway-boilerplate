@@ -86,7 +86,7 @@ export default async function Nav() {
               <li key={name}>
                 <LocalizedClientLink
                   href={href}
-                  className="text-xl leading-10 hover:text-ui-fg-disabled"
+                  className="text-xl leading-10 hover:text-ui-fg-disabled"cd
                 >
                   {name}
                 </LocalizedClientLink>

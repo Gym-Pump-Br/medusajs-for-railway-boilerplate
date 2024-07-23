@@ -18,7 +18,7 @@ const ProductInfo = ({ product }: ProductInfoProps) => {
             {product.collection.title}
           </LocalizedClientLink>
         )}
-        <Heading level="h2" className="text-3xl leading-10 text-ui-fg-base">
+        <Heading level="h2" className="text-4xl leading-10  text-ui-fg-base">
           {product.title}
         </Heading>
 

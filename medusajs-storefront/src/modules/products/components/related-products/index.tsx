@@ -66,8 +66,8 @@ export default async function RelatedProducts({
         <span className="text-base-regular text-gray-600 mb-6">
           Produtos relacionados
         </span>
-        <p className="text-2xl-regular text-ui-fg-base max-w-lg">
-          Você também pode querer verificar esses produtos.
+        <p className="text-3xl-semi uppercase font-montserrat text-ui-fg-base max-w-lg">
+          Você também vai gostar
         </p>
       </div>
 
